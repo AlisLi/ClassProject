@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 渐变的矩形按钮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#FFB6C1" android:endColor="#FF7F00"
+                      android:type="linear" android:angle="270"/>
+            <stroke android:color="#FFA500" android:width="2dip"/>
+            <corners android:radius="5dp"/>
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp"
+                     android:top="10dp"/>
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#FFF68F" android:endColor="#FFDAB9"
+                      android:angle="270"/>
+            <stroke android:color="#FFA500" android:width="1dip"/>
+            <corners android:radius="5dp"/>
+            <padding android:right="10dp" android:left="10dp" android:bottom="10dp"
+                     android:top="10dp"/>
+        </shape>
+    </item>
+
+    <!-- 默认效果 -->
+    <!-- 注意：默认效果没有stroke，而按钮效果有stroke；这样可以实现类似按下的动态效果 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#FFF68F" android:endColor="#FFDAB9"
+                android:angle="270"/>
+            <corners android:radius="5dp"/>
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp"
+                     android:top="10dp"/>
+        </shape>
+    </item>
+</selector>
